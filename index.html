@@ -3,185 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery App | Comida a Domicilio Rápida y Fácil</title>
-    <!-- Carga de Tailwind CSS -->
+    <title>Unite7speed | Tu App de Delivery Rápido</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuración de color principal y fuente Inter -->
+    <!-- Configuración del tema Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'primary': '#4f46e5', // Indigo 600
-                        'secondary': '#10b981', // Emerald 500
-                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
-                }
-            }
+                    colors: {
+                        'primary-orange': '#F97316', // Naranja vibrante
+                        'primary-indigo': '#4f46e5', // Índigo para contraste
+                    },
+                },
+            },
         }
     </script>
     <style>
-        /* Estilo para la fuente Inter (si no está disponible por defecto) */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-        /* Fondo de patrón sutil para la sección principal */
-        .hero-bg {
-            background-color: #f8faff;
-            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
-            background-size: 10px 10px;
-        }
-
-        /* Estilo personalizado para el botón principal con sombra */
-        .btn-primary {
-            transition: all 0.2s;
-            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4), 0 2px 4px -2px rgba(79, 70, 229, 0.4);
-        }
-        .btn-primary:hover {
-            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.7), 0 4px 6px -4px rgba(79, 70, 229, 0.7);
-            transform: translateY(-2px);
+        /* Estilo base para el cuerpo */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800">
+<body class="text-gray-800">
 
-    <!-- Header (Navegación Simple) -->
-    <header class="shadow-md bg-white sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold text-primary tracking-tight">DeliveryApp</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#caracteristicas" class="text-gray-600 hover:text-primary transition duration-150">Características</a>
-                <a href="#app" class="text-gray-600 hover:text-primary transition duration-150">Descarga la App</a>
-            </nav>
-            <a href="#app" class="md:hidden p-2 rounded-full bg-primary text-white">
-                <!-- Icono de descarga -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-            </a>
+    <!-- Navbar/Header Fijo -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-extrabold tracking-tight text-primary-orange">Unite7speed</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#features" class="text-gray-600 hover:text-primary-orange font-medium">Características</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary-orange font-medium">Opiniones</a>
+                    <a href="#cta" class="text-primary-orange hover:text-primary-indigo font-medium border-b-2 border-primary-orange">Descarga</a>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Sección Hero (Principal) -->
-    <section class="hero-bg py-20 sm:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
-            <!-- Texto Principal -->
-            <div class="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
-                <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
-                    Tu Comida Favorita, <span class="text-primary">Entregada al Instante.</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-                    Pide lo que se te antoje de tus restaurantes locales favoritos con nuestra aplicación rápida y confiable. ¡Simple, fácil y delicioso!
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-white pt-16 pb-24 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <p class="text-sm font-semibold uppercase text-primary-indigo tracking-wider">La Velocidad que Necesitas</p>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        Tu Comida Favorita en Minutos, con <span class="text-primary-orange">7x Velocidad</span>.
+                    </h1>
+                    <p class="text-lg text-gray-600">
+                        Unite7speed conecta con los mejores restaurantes y repartidores para garantizar entregas rápidas, seguras y rastreables. ¡Ordena ahora y sorpréndete!
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                        <button class="px-8 py-3 bg-primary-orange text-white font-bold rounded-xl shadow-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105">
+                            Descargar para Android
+                        </button>
+                        <button class="px-8 py-3 bg-gray-100 text-gray-800 font-bold rounded-xl shadow-lg hover:bg-gray-200 transition duration-300">
+                            Descargar para iOS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Image (Placeholder Mockup) -->
+                <div class="flex justify-center md:justify-end">
+                    <!-- Usando un placeholder más atractivo que simula una app -->
+                    <div class="bg-primary-indigo p-6 rounded-3xl shadow-2xl relative">
+                        <div class="w-64 h-96 bg-gray-50 rounded-2xl flex flex-col justify-center items-center text-gray-500 font-semibold text-sm">
+                            <span class="text-3xl text-primary-orange mb-2">🚚</span>
+                            <p>Vista de la App</p>
+                            <p>Unite7speed</p>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary-orange rounded-full shadow-xl flex items-center justify-center text-white text-3xl transform rotate-12">7x</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-4 mb-12">
+                    <h2 class="text-4xl font-extrabold text-gray-900">Características que te encantan</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Diseñado para la máxima comodidad, seguridad y rapidez en cada orden.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Feature 1: Menú -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4 border-t-4 border-primary-orange transform hover:scale-[1.02] transition duration-300">
+                        <div class="text-4xl text-primary-orange"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-9 5h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2zm8-5v-5"/></svg></div>
+                        <h3 class="text-xl font-bold">Menú Vasto y Rápido</h3>
+                        <p class="text-gray-600">Explora cientos de opciones de comida, filtradas por categoría, rating y tiempo de entrega. Nunca te quedes sin opciones.</p>
+                    </div>
+                    
+                    <!-- Feature 2: Ubicación / Tracking -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4 border-t-4 border-primary-indigo transform hover:scale-[1.02] transition duration-300">
+                        <div class="text-4xl text-primary-indigo"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                        <h3 class="text-xl font-bold">Seguimiento GPS Exacto</h3>
+                        <p class="text-gray-600">Mira el recorrido de tu delivery en tiempo real. Sabrás exactamente cuándo esperar tu pedido con la ubicación actualizada.</p>
+                    </div>
+
+                    <!-- Feature 3: Chat -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg space-y-4 border-t-4 border-primary-orange transform hover:scale-[1.02] transition duration-300">
+                        <div class="text-4xl text-primary-orange"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+                        <h3 class="text-xl font-bold">Chat Integrado</h3>
+                        <p class="text-gray-600">Comunícate directamente con tu repartidor para darle instrucciones especiales o confirmar detalles de tu entrega sin llamadas molestas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-indigo-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-4 mb-12">
+                    <h2 class="text-4xl font-extrabold text-gray-900">Lo que dicen nuestros clientes</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Miles de usuarios confían en la velocidad y el servicio de Unite7speed.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-xl space-y-4">
+                        <p class="text-primary-orange text-2xl font-bold">★★★★★</p>
+                        <p class="text-gray-700 italic">"¡La app más rápida que he usado! Mi pizza llegó caliente en menos de 20 minutos. El seguimiento es impecable."</p>
+                        <p class="font-semibold text-sm text-gray-900">- Ana M., Cliente Frecuente</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-xl space-y-4">
+                        <p class="text-primary-orange text-2xl font-bold">★★★★★</p>
+                        <p class="text-gray-700 italic">"El chat con el repartidor fue súper útil. Pude indicarle mi puerta sin problemas. ¡Servicio de 10!"</p>
+                        <p class="font-semibold text-sm text-gray-900">- Ricardo P., Nuevo Usuario</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-xl space-y-4">
+                        <p class="text-primary-orange text-2xl font-bold">★★★★★</p>
+                        <p class="text-gray-700 italic">"Me encanta que las ubicaciones se guarden tan fácilmente. Ya no tengo que escribir mi dirección completa. Ahorra tiempo real."</p>
+                        <p class="font-semibold text-sm text-gray-900">- Sofía G., Cliente Satisfecha</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA Section -->
+        <section id="cta" class="py-20 bg-primary-orange">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white">¿Listo para la velocidad Unite7speed?</h2>
+                <p class="text-xl text-orange-200">
+                    Descárgala hoy y recibe tu primer pedido con un 10% de descuento. ¡La mejor experiencia de delivery te espera!
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#app" class="btn-primary bg-primary text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-indigo-700">
-                        Descarga Ahora
-                    </a>
-                    <a href="#caracteristicas" class="bg-white text-primary border border-primary font-semibold py-3 px-8 rounded-full text-lg hover:bg-primary hover:text-white transition duration-200">
-                        Ver Características
-                    </a>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
+                    <button class="px-10 py-4 bg-white text-primary-orange font-extrabold rounded-xl shadow-2xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                        Descargar en Google Play
+                    </button>
+                    <button class="px-10 py-4 border-2 border-white text-white font-extrabold rounded-xl shadow-lg hover:bg-white hover:text-primary-orange transition duration-300 transform hover:scale-105">
+                        Descargar en App Store
+                    </button>
                 </div>
             </div>
-
-            <!-- Imagen/Mockup (Placeholder atractivo) -->
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-                <img src="https://placehold.co/400x600/4f46e5/ffffff?text=App+Screen" 
-                     alt="Mockup de la aplicación de delivery en un teléfono" 
-                     class="w-full max-w-xs sm:max-w-sm rounded-3xl shadow-2xl transform hover:scale-[1.02] transition duration-300 border-8 border-white"
-                     onerror="this.onerror=null; this.src='https://placehold.co/400x600/4f46e5/ffffff?text=App';"
-                >
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Características (Basado en las funcionalidades de tu app) -->
-    <section id="caracteristicas" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">¿Por Qué Elegirnos?</h2>
-            <p class="text-xl text-gray-600 mb-16">Funcionalidades diseñadas para ti y para tu antojo.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Característica 1: Productos (Menú) -->
-                <div class="p-6 bg-indigo-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Menú Completo</h3>
-                    <p class="text-gray-600">Explora cientos de platillos. Conoce el precio y descripción de cada producto al instante.</p>
-                </div>
-
-                <!-- Característica 2: Ubicación -->
-                <div class="p-6 bg-indigo-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Registro de Ubicaciones</h3>
-                    <p class="text-gray-600">Guarda tus direcciones favoritas (casa, oficina, etc.) y úsalas rápidamente en tu próximo pedido.</p>
-                </div>
-
-                <!-- Característica 3: Chat -->
-                <div class="p-6 bg-indigo-50 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 4v-4z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Soporte Instantáneo</h3>
-                    <p class="text-gray-600">¿Dudas? Nuestro chatbot de soporte está disponible 24/7 para ayudarte con cualquier consulta.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Sección de CTA (Call to Action) / Descarga -->
-    <section id="app" class="py-20 bg-primary/95 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-extrabold mb-4">¡No esperes más! Descarga la App</h2>
-            <p class="text-xl mb-12 opacity-80 max-w-2xl mx-auto">
-                Lleva la experiencia de DeliveryApp contigo. Disponible en tu plataforma favorita.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <!-- Botón de Google Play (Simulado) -->
-                <a href="#" class="bg-gray-900 hover:bg-black transition duration-200 py-3 px-6 rounded-lg flex items-center shadow-2xl max-w-xs w-full sm:w-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <div>
-                        <span class="block text-xs text-left opacity-70">DISPONIBLE EN</span>
-                        <span class="block text-xl font-semibold">Google Play</span>
-                    </div>
-                </a>
-
-                <!-- Botón de App Store (Simulado) -->
-                <a href="#" class="bg-gray-900 hover:bg-black transition duration-200 py-3 px-6 rounded-lg flex items-center shadow-2xl max-w-xs w-full sm:w-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                    <div>
-                        <span class="block text-xs text-left opacity-70">DISPONIBLE EN</span>
-                        <span class="block text-xl font-semibold">App Store</span>
-                    </div>
-                </a>
-            </div>
-            
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm opacity-75">
-            <p>&copy; 2024 DeliveryApp. Todos los derechos reservados.</p>
-            <div class="mt-2 space-x-4">
-                <a href="#" class="hover:text-primary transition duration-150">Términos de Servicio</a>
-                <span>|</span>
-                <a href="#" class="hover:text-primary transition duration-150">Política de Privacidad</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2 text-primary-orange font-bold">Unite7speed</p>
+            <p class="text-sm text-gray-400">© 2025 Todos los derechos reservados.</p>
+            <div class="mt-4 space-x-4 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a>
+                <a href="#" class="text-gray-400 hover:text-white">Términos de Servicio</a>
             </div>
         </div>
     </footer>
